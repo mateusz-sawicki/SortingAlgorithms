@@ -2,13 +2,13 @@
 {
     public class BubbleSort
     {
-        public int[] inputArray { get; set; }
+        public int[] InputArray { get; set; }
 
         public BubbleSort(int[] arrayToSort)
         {
-            inputArray = BubbleSortAlg(arrayToSort);
+            InputArray = BubbleSortAlg(arrayToSort);
         }
-        private int[] BubbleSortAlg(int[] array)
+        private static int[] BubbleSortAlg(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
@@ -20,9 +20,7 @@
                     }
                     else if (array[k] > array[k + 1])
                     {
-                        int j = array[k];
-                        array[k] = array[k + 1];
-                        array[k + 1] = j;
+                        (array[k + 1], array[k]) = (array[k], array[k + 1]);
                     }
                 }
             }

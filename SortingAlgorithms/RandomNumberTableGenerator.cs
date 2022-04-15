@@ -10,6 +10,9 @@ namespace SortingAlgorithms
     public class RandomNumberTableGenerator
     {
         public int[] RandomNumberArray { get; set; }
+        private readonly Random RandomNumber = new();
+
+
         public RandomNumberTableGenerator()
         {
             Console.WriteLine("Wpisz ilość elementów tablicy: ");
@@ -25,8 +28,7 @@ namespace SortingAlgorithms
 
             for (int i = 0; i < arraySize; i++)
             {
-                int randomNumber = RandomNumberGenerator.GetInt32(arrayNumberRange);
-                array[i] = randomNumber;
+                array[i] = RandomNumber.Next(0,arrayNumberRange);
             }
 
             return array;

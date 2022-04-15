@@ -8,11 +8,11 @@ var randomNumberArray = randomNumberTable.RandomNumberArray;
 
 showArray(randomNumberArray, "losowych");
 
-BubbleSort bubbleSort = new BubbleSort(randomNumberArray);
+BubbleSort bubbleSort = new(randomNumberArray);
 
-showArray(bubbleSort.inputArray, "posortowanych");
+showArray(bubbleSort.InputArray, "posortowanych");
 
-void showArray(int[] array, string info)
+static void showArray(int[] array, string info)
 {
     Console.Write($"Tablica {info} liczb: [");
 
